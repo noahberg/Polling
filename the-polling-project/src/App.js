@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ThemeProvider } from "styled-components";
+import trust from './trust.svg';
+import visualization from './visualization.svg';
+import open from './open.svg'
 
 import Wrapper from "./components/Wrapper";
 import Header from "./components/Header";
@@ -94,7 +97,7 @@ const MiddleHero = styled.h1`
 const LearnMore = styled.div`
   z-index: 5;
   position: relative;
-  background-image: linear-gradient(#D63131 -3vh, white 30vw);
+  background-image: linear-gradient(#D63131 10vh, white 40vw);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
   font-family: ${props => props.theme.font};
   font-weight: 600;
@@ -110,7 +113,7 @@ const LearnMore = styled.div`
   text-align: center;
   border-radius: .8vw;
   border-width: .2vw;
-  padding: 10px;
+  padding: 1.5em;
   cursor: pointer;
 `
 
@@ -125,15 +128,75 @@ const LearnMoreText = styled.p`
 
 const BottomSemi = styled.div`
   position: relative;
-  background-image: radial-gradient(#D63131 -10vh, white 1000vh);
+  background-image: radial-gradient(#D63131 -1vh, white 1000vw);
   box-shadow: 0 0 20px 0 rgba(82, 95, 110, 0.3);
-  height: 70vh;
+  height: 75vh;
   width: 100%;
   border-radius: 40% 40% 40% 40% / 15% 15% 0% 0%;
   top: 90vh;
 `
 
+const BottomGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+`
 
+const BottomSection = styled.div`
+  text-align: center;
+  color: white;
+  font-family: ${props => props.theme.font};
+  font-weight: 700;
+  position: relative;
+  top: 25vh;
+  font-size: 1.6vw;
+`
+
+const BottomText = styled.p`
+  font-weight: 500;
+  padding: 1em 8em;
+  font-size: 1vw;
+`
+
+const BottomImg1 = styled.div`
+  margin: auto;
+  justify-self: center;
+  align-items: center;
+  background-image: url(${trust});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 5em;
+  height: 5em;
+  position: relative;
+  top: -10vh;
+` 
+const BottomImg2 = styled.div`
+  margin: auto;
+  justify-self: center;
+  align-items: center;
+  background-image: url(${visualization});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 5em;
+  height: 5em;
+  position: relative;
+  top: -10vh;
+`
+const BottomImg3 = styled.div`
+  margin: auto;
+  justify-self: center;
+  align-items: center;
+  background-image: url(${open});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 5em;
+  height: 5em;
+  position: relative;
+  top: -10vh;
+`  
 
 export default () => (
   <ThemeProvider theme={theme}>
@@ -163,6 +226,29 @@ export default () => (
 backed by SSN verification to eradicate bots and third-party influence.</MiddleHero2>
         <LearnMore><LearnMoreText>LEARN MORE</LearnMoreText></LearnMore>
         <BottomSemi>
+          <BottomGrid>
+            <BottomSection>
+              <BottomImg1></BottomImg1>
+            Trust and Transparency
+              <BottomText>SSN never stored, only used for verification. 
+                In-depth security measures ensure that each user is a real, 
+                individual human for the most accurate poll results.</BottomText> 
+            </BottomSection>
+            <BottomSection>
+            <BottomImg2></BottomImg2>
+            Data Visualization
+            <BottomText>The most accurate results deserve to be expressed clearly. 
+              Our data visualization dashboards allow for in-depth exploration 
+              and understanding.</BottomText>
+            </BottomSection>
+            <BottomSection>
+            <BottomImg3></BottomImg3>
+            Open Conversation
+              <BottomText>Poll participants gain access to a full discussion section. 
+                Go in-depth on the opinions of others, or sway your fellow citizens 
+                through polite conversation.</BottomText>
+            </BottomSection>
+          </BottomGrid>
         </BottomSemi>
       </Body>
     </Wrapper>
