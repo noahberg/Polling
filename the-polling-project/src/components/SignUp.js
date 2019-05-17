@@ -3,11 +3,11 @@ import styled from "styled-components";
 export default styled.div`
     z-index: 5;
     position: relative;
-    background-image: linear-gradient(#3151D6 -3vh, white 30vw);
+    background-image: linear-gradient(#3151D6 4vh, white 30vw);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
     font-family: ${props => props.theme.font};
     font-weight: 600;
-    top: -5vh;
+    top: -7.8vh;
     margin-left: auto;
     margin-right: auto;
     color: white;
@@ -19,6 +19,6 @@ export default styled.div`
     text-align: center;
     border-radius: .8vw;
     border-width: .2vw;
-    padding: 10px;
+    padding: 1.5em;
     cursor: pointer;
 `;
