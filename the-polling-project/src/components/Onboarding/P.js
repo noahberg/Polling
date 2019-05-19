@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export default styled.div`
-    width: 70%;
+    width: 80%;
     position: relative;
     align-self: center;
     justify-self: center;
     font-family: "Avenir Next";
-    top: 1vh;
+    top: 2vh;
     padding-top: 3vh;
 `

@@ -6,6 +6,6 @@ export default styled.div`
     margin-left: 2vw;
     color: white;
     letter-spacing: 0.06vw;
-    font-size: 1.6vw;
+    font-size: 1.6rem;
     font-weight: 500;
 `
