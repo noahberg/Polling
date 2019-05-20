@@ -7,5 +7,5 @@ export default styled.div`
     flex-direction: row;
     justify-content: space-evenly;
     align-self: center;
-    width: 70%;
+    width: 95%;
 `

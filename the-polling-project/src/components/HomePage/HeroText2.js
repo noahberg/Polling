@@ -9,9 +9,9 @@ export default styled.h3`
     top: 10vh;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 10vw;
-    padding-right: 10vw;
-    font-size: 1.2vw 1.2vh;
+    padding-left: 14vw;
+    padding-right: 14vw;
+    font-size: 1em;
     font-family: ${props => props.theme.font};
     font-weight: 400;
     letter-spacing: 0.08vw; 

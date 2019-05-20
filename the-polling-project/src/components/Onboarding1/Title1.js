@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 export default styled.div`
-    font-family: "Marion";
-    font-size: 3.5vw;
-    font-weight: bold;
+    font-family: "Gill Sans";
+    font-size: 1.8rem;
+    font-weight: regular;
     align-self: center;
     justify-self: center;
     color: white;
-    position: relative;
-    top: -0.8vh;
+    margin-top: 1.2em;
 `
