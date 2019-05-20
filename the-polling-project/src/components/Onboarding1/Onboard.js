@@ -8,6 +8,8 @@ export default styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     border-radius: 2vw;
     box-shadow: 0 0 20px 0 rgba(82, 95, 110, 0.3);
