@@ -7,5 +7,5 @@ export default styled.div`
     font-weight: 700;
     position: relative;
     top: 25vh;
-    font-size: 1.6vw 1.6vh;
+    font-size: 1.4rem;
 `

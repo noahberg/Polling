@@ -54,7 +54,7 @@ export default () => (
           <HeroText>A big data solution to the polling problem</HeroText>
           <HeroText2>Participate in polls and engage in authentic, open conversation without bots or bias.</HeroText2>
           </SemiCircle> 
-          <SignUp><SignUpText><Link to={"/onboarding"} style={{textDecoration: "none", color: "white"}}>SIGN UP</Link></SignUpText></SignUp>
+          <SignUp><Link to={"/onboarding"} style={{textDecoration: "none", color: "white"}}><SignUpText>SIGN UP</SignUpText></Link></SignUp>
           <MiddleHero>The future of digital democracy</MiddleHero>
           <MiddleHero2>An online community for authentic public opinion conversation 
 backed by SSN verification to eradicate bots and third-party influence.</MiddleHero2>
