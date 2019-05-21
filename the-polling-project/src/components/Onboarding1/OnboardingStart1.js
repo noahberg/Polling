@@ -35,8 +35,31 @@ export default () => (
         <Formik
             initialValues={{ email: "", password: ""}}
             validate={values => {
-                console.log(values);
+                let errors = {};
+            
+                // REGEX validation
+                let regex = !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+                // Validation
+                if (!values.email) {
+                    errors.email = "Email is required";
+                } else if (regex.test(values.email)) {
+                    errors.email = "Invalid email address";
+                }
+            
+                if (!values.password) {
+                    errors.password = "A password is required";
+                } else if (values.password.length < 8) {
+                    errors.password = "Password must be 8 characters";
+                }
+            
+                if (!values.display) {
+                    errors.display = "A username is required";
+                } else if (values.display.length < 7) {
+                    errors.display = "Display name must be 7 characters";
+                }
+                return errors;
             }}
+            
             onSubmit={values => {
                 console.log(values);
             }}
@@ -52,12 +75,12 @@ export default () => (
                     <P>
                     <Label>
                     Email 
-                    {errors.email && <Text color="red">{errors.email}</Text>}</Label>
+                    {touched.email && errors.email && <Text color="red">{errors.email}</Text>}</Label>
                     <Input 
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.email}
-                        border={errors.email && "1px solid red"}
+                        border={touched.email && errors.email && "1px solid red"}
                         type="text"
                         name="email"
                         placeholder="Email"
@@ -66,12 +89,12 @@ export default () => (
                     <P>
                     <Label>
                     Display Name 
-                    {errors.display && <Text color="red">{errors.display}</Text>}</Label>
+                    {touched.display && errors.display && <Text color="red">{errors.display}</Text>}</Label>
                     <Input
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.display}
-                        border={errors.display && "1px solid red"}
+                        border={touched.display && errors.display && "1px solid red"}
                         type="text"
                         name="display"
                         placeholder="Username"
@@ -80,12 +103,12 @@ export default () => (
                     <P>
                     <Label>
                     Password 
-                    {errors.password && <Text color="red">{errors.password}</Text>}</Label>
+                    {touched.password && errors.password && <Text color="red">{errors.password}</Text>}</Label>
                     <Input
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.password}
-                        border={errors.password && "1px solid red"}
+                        border={touched.password && errors.password && "1px solid red"}
                         type="text"
                         name="password"
                         placeholder="*********"
