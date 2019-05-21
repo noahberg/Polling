@@ -19,6 +19,6 @@ export default styled.div`
     text-align: center;
     border-radius: .6em;
     border-width: .2em;
-    padding: 1.5em;
+    padding: 1.8em;
     cursor: pointer;
 `;
