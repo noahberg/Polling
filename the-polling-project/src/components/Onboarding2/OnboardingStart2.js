@@ -38,29 +38,35 @@ export default () => (
             <PersonalProgress></PersonalProgress>
         </Progress>
         <Formik
-            initialValues={{ email: "", password: ""}}
+            initialValues={{ firstname: "", lastname: "", dob: "", ssn: ""}}
             validate={values => {
                 let errors = {};
             
                 // REGEX validation
                 let regex = !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
                 // Validation
-                if (!values.email) {
-                    errors.email = "Email is required";
-                } else if (regex.test(values.email)) {
-                    errors.email = "Invalid email address";
+                if (!values.firstname) {
+                    errors.firstname = "First name is required";
+                } else if (values.firstname.length < 1) {
+                    errors.firstname = "Invalid first name";
                 }
             
-                if (!values.password) {
-                    errors.password = "A password is required";
-                } else if (values.password.length < 8) {
-                    errors.password = "Password must be 8 characters";
+                if (!values.lastname) {
+                    errors.lastname = "Last name is required";
+                } else if (values.lastname.length < 1) {
+                    errors.lastname = "Invalid last name ";
                 }
             
-                if (!values.display) {
-                    errors.display = "A username is required";
-                } else if (values.display.length < 7) {
-                    errors.display = "Display name must be 7 characters";
+                if (!values.dob) {
+                    errors.dob = "DOB is required";
+                } else if (values.dob.length < 6) {
+                    errors.dob = "Invalid Date of Birth";
+                }
+
+                if (!values.ssn) {
+                    errors.ssn = "SSN is required";
+                } else if (values.ssn.length < 9) {
+                    errors.ssn = "Invalid SSN";
                 }
                 return errors;
             }}
@@ -80,61 +86,61 @@ export default () => (
                     <P>
                     <Label>
                     First Name 
-                    {touched.email && errors.email && <Text color="red">{errors.email}</Text>}</Label>
+                    {touched.firstname && errors.firstname && <Text color="red">{errors.firstname}</Text>}</Label>
                     <Input 
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        value={values.email}
-                        border={touched.email && errors.email && "1px solid red"}
+                        value={values.firstname}
+                        border={touched.firstname && errors.firstname && "1px solid red"}
                         type="text"
-                        name="email"
+                        name="firstname"
                         placeholderTextColor = "white"
-                        placeholder="Email"
+                        placeholder="Firstname"
                     />
                     </P>
                     <P>
                     <Label>
                     Last Name 
-                    {touched.display && errors.display && <Text color="red">{errors.display}</Text>}</Label>
+                    {touched.lastname && errors.lastname && <Text color="red">{errors.lastname}</Text>}</Label>
                     <Input
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        value={values.display}
-                        border={touched.display && errors.display && "1px solid red"}
+                        value={values.lastname}
+                        border={touched.lastname && errors.lastname && "1px solid red"}
                         type="text"
-                        name="display"
+                        name="lastname"
                         placeholderTextColor = "white"
-                        placeholder="Username"
+                        placeholder="Last Name"
                     />
                     </P>
                     <P primary>
                     <Label>
                     Date Of Birth 
-                    {touched.password && errors.password && <Text color="red">{errors.password}</Text>}</Label>
+                    {touched.dob && errors.dob && <Text color="red">{errors.dob}</Text>}</Label>
                     <Input
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        value={values.password}
-                        border={touched.password && errors.password && "1px solid red"}
+                        value={values.dob}
+                        border={touched.dob && errors.dob && "1px solid red"}
                         type="text"
-                        name="password"
+                        name="dob"
                         placeholderTextColor = "white"
-                        placeholder="*********"
+                        placeholder="01/12/1994"
                     />
                     </P>
                     <P primary>
                     <Label>
                     Social Security Number
-                    {touched.social && errors.social && <Text color="red">{errors.social}</Text>}</Label>
+                    {touched.ssn && errors.ssn && <Text color="red">{errors.ssn}</Text>}</Label>
                     <Input 
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        value={values.social}
-                        border={touched.social && errors.social && "1px solid red"}
+                        value={values.ssn}
+                        border={touched.ssn && errors.ssn && "1px solid red"}
                         type="text"
-                        name="social"
+                        name="ssn"
                         placeholderTextColor = "white"
-                        placeholder="*********"
+                        placeholder="123-45-6789"
                     />
                     </P>
                     <P>
