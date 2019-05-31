@@ -11,6 +11,8 @@ import Header from "./Header";
 import HeaderLinks from "./HeaderLinks";
 import HeaderText from "./HeaderText";
 
+
+
   export default () => (
         <Wrapper>
             <Header>
@@ -35,5 +37,5 @@ import HeaderText from "./HeaderText";
           
           <MiddleImage></MiddleImage>
           <Begin>BEGIN</Begin>
-        </Wrapper>
+        </Wrapper>  
   )
