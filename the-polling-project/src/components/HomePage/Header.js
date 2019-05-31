@@ -5,5 +5,7 @@ export default styled.header`
     display: grid;
     grid-template-columns: 1.8em 12em auto 4em 4em 4em 4em;
     text-align: center;
-    padding: 6vh 5vw;
+    padding: 6vh 2vw;
+    margin-left: 5em;
+    margin-right: 5em;
 `;

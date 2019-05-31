@@ -8,7 +8,7 @@ export default styled.input`
     background-color: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 0.8);
     position: relative;
-    top: 2.4vh;
+    top: 1vh;
     width: 100%;
     color: white;
 `

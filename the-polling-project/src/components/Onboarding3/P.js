@@ -6,7 +6,12 @@ export default styled.div`
     align-self: center;
     justify-self: center;
     font-family: "Avenir Next";
+    top: 2vh;
     color: white;
-    padding-top: 2.8vh;
+    padding-top: 3vh;
     flex-basis: 35%;
+    @media (max-width: 768px) {
+        flex-basis: 80%;
+        top: 1vh;
+    }
 `

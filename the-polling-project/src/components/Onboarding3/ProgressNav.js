@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export default styled.div`
     position: relative;
-    top: 0.2vh;
+    top: 1vh;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
