@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export default styled.button`
    font-family: "Avenir Next";
-   top: -2vh;
+   top: -4.5vh;
    position: relative;
    font-weight: 700;
-   font-size: 0.7rem;
+   font-size: 0.9rem;
    letter-spacing: 0.1vw;
    color: black;
    align-self: center;

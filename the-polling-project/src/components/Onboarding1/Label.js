@@ -9,4 +9,7 @@ export default styled.div`
     font-weight: 500;
     top: 1vh;
     margin-left: 1.4vw;
+    @media (max-width: 768px) {
+        font-size: 1.2rem;
+    }
 `

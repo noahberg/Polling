@@ -5,8 +5,11 @@ export default styled.div`
     text-align: left;
     color: white;
     letter-spacing: 0.06vw;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     font-weight: 500;
-    top: 1.2vh;
-    margin-left: 1vw;
+    top: 1vh;
+    margin-left: 1.4vw;
+    @media (max-width: 768px) {
+        font-size: 1rem;
+    }
 `

@@ -10,7 +10,7 @@ export default styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     top: -5vh;
-    width: 10em;
-    height: 10em;
+    width: 15em;
+    height: 12em;
     position: relative;
 ` 

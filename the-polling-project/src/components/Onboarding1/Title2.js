@@ -8,5 +8,8 @@ export default styled.div`
    justify-self: center;
    color: white;
    position: relative;
-   top: -0.8vh;
+   top: -1.2vh;
+   @media (max-width: 768px) {
+      font-size: 2.4rem;
+  }
 `

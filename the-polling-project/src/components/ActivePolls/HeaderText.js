@@ -9,4 +9,4 @@ export default styled.div`
     color: white;
     align-self: ${props => (props.primary ? "center" : "left")};
     justify-self: ${props => (props.primary ? "center" : "left")};
-`;
+`

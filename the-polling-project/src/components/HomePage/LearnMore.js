@@ -21,4 +21,13 @@ export default styled.div`
     border-width: .2vw;
     padding: 1.5em;
     cursor: pointer;
+    align-items: center;
+    font-size: 1.2vw 1.2vh;
+    letter-spacing: 0.15vw;
+    @media (max-width: 768px) {
+        width: 12vw;
+        height: 6vh;
+        font-size: 0.8rem;
+        letter-spacing: 0.05vw;
+    }
 `

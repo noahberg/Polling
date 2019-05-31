@@ -4,10 +4,10 @@ export default styled.div`
     font-family: "Avenir Next";
     padding-left: 1.5em;
     padding-right: 1.5em;
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     font-weight: 700;
     justify-self: center;
-    justify-content: center;
+    align-self: center;
     color: black;
     margin-top: 1em;
 `

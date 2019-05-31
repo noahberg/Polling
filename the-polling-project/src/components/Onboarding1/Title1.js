@@ -7,5 +7,8 @@ export default styled.div`
     align-self: center;
     justify-self: center;
     color: white;
-    margin-top: 1.2em;
+    margin-top: 0.6em;
+    @media (max-width: 768px) {
+        font-size: 1.4rem;
+    }
 `

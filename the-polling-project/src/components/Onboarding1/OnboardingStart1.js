@@ -33,7 +33,7 @@ export default () => (
             <AccountProgress></AccountProgress>
         </Progress>
         <Formik
-            initialValues={{ email: "", password: ""}}
+            initialValues={{ email: "", password: "", display: ""}}
             validate={values => {
                 let errors = {};
             
@@ -80,7 +80,6 @@ export default () => (
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.email}
-                        border={touched.email && errors.email && "1px solid red"}
                         type="text"
                         name="email"
                         placeholder="Email"
@@ -94,7 +93,6 @@ export default () => (
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.display}
-                        border={touched.display && errors.display && "1px solid red"}
                         type="text"
                         name="display"
                         placeholder="Username"
@@ -108,7 +106,6 @@ export default () => (
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.password}
-                        border={touched.password && errors.password && "1px solid red"}
                         type="text"
                         name="password"
                         placeholder="*********"

@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export default styled.header`
-    background-color: blue;
+    background-image: radial-gradient(#3151D6 30vh, white 1000vh);
     display: grid;
-    grid-template-columns: 1.8em 12em auto 4em 4em 4.5em;
+    grid-template-columns: 1.8em 12em auto 4em 6em 6em;
     text-align: center;
-    padding: 2vh 5vw;
+    padding: 1.8vh 2vw;
+    width: 100vw;
 `;

@@ -6,6 +6,6 @@ export default styled.div`
     align-self: center;
     justify-self: center;
     width: 42%;
-    height: 0.6vh;
+    height: 0.8vh;
     border-radius: 2vw;
 `

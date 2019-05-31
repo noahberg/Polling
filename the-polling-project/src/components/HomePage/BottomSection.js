@@ -7,5 +7,9 @@ export default styled.div`
     font-weight: 700;
     position: relative;
     top: 25vh;
+    @media (max-width: 768px) {
+       padding-top: 10vh;
+       top: 0;
+    }
     font-size: 1.4rem;
 `

@@ -1,11 +1,7 @@
 import React from 'react';
-import { ThemeProvider } from "styled-components";
-import styled from "styled-components";
 import {Link} from "react-router-dom";
 
 import Begin from "./Begin";
-import BeginText from "./BeginText";
-import Body from "./Body";
 import Square from "./Square";
 import MiddleImage from "./MiddleImage";
 import ParticipateText from "./ParticipateText";
@@ -16,16 +12,9 @@ import HeaderLinks from "./HeaderLinks";
 import HeaderText from "./HeaderText";
 
 
-const theme = {
-    font: "Avenir Next"
-  };
-
 
   export default () => (
-
-    <ThemeProvider theme={theme}>
         <Wrapper>
-            <Body>
             <Header>
             <HeaderText primary>the</HeaderText>
             <HeaderText>polling project</HeaderText>
@@ -48,7 +37,5 @@ const theme = {
           
           <MiddleImage></MiddleImage>
           <Begin>BEGIN</Begin>
-          </Body>
-        </Wrapper>
-    </ThemeProvider>    
+        </Wrapper>  
   )
