@@ -10,6 +10,7 @@ import HeaderText from "./HeaderText";
 import Square from "./Square";
 import Wrapper from "./Wrapper";
 import ResultWrapper from "./ResultWrapper";
+import MainResult from "./MainResult";
 
 const theme = {
     font: "Avenir Next"
@@ -37,7 +38,7 @@ const theme = {
          
           </Header>
 
-            <ResultWrapper> hey </ResultWrapper>
+            <ResultWrapper> <MainResult></MainResult></ResultWrapper>
           
           </Body>
         </Wrapper>
