@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export default styled.div`
-    justify-content: center;
-    align-items:center;
-    display:flex;
-    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 `;

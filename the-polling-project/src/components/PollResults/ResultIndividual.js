@@ -1,7 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export default styled.div`
-    position: relative;
     padding-left: 2em;
     padding-right: 2em;
     align-self: center;
@@ -10,9 +9,12 @@ export default styled.div`
     font-size: 0.85rem;
     font-weight: 700;
     flex-basis: 30%;
-    top: -3vh;
-    @media (max-width: 768px) {
-        font-size: 0.8rem;
+    @media (max-width: 1224px) {
+        font-size: 0.7rem;
         flex-basis: 25%;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 0.6rem;
     }
 `

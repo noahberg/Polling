@@ -8,6 +8,7 @@ import OnboardingStart3 from "./components/Onboarding3/OnboardingStart3";
 import ActivePolls from "./components/ActivePolls/ActivePolls";
 import CurrentPolls from "./components/CurrentPolls/CurrentPolls";
 import PollResults from "./components/PollResults/PollResults";
+import Question from "./components/Question/Question";
 
 export default () => (
   <Router>
@@ -17,6 +18,7 @@ export default () => (
     <Route path="/onboarding3" exact strict component={OnboardingStart3}></Route>
     <Route path="/activepolls" exact strict component={ActivePolls}></Route>
     <Route path="/currentpolls" exact strict component={CurrentPolls}></Route>
+    <Route path="/question" exact strict component={Question}></Route>
     <Route path="/pollresults" exact strict component={PollResults}></Route>
 
   </Router>
