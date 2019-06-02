@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import styled from "styled-components";
 
 import Wrapper from "./Wrapper";
 import PollGrid from "./PollGrid";
@@ -24,17 +25,81 @@ import ResultIndividual from "./ResultIndividual";
 import Graph1 from "./Graph1";
 import ImgContainer from "./ImgContainer";
 import PieChart from "./PieChart";
-import ResultsOverview from "./ResultsOverview";
 import Referrals from "./Referrals";
 import Map from "./Map";
 import Heat from "./Heat";
+import ResultsOverview from "./ResultsOverview";
+import Percent from "./Percent";
 
 import graph from './graph1.png';
 import pie from "./pie.png";
-import overview from "./resultskey.png";
 import referrals from "./referrals.png";
 import map from "./map.png";
 import heat from "./heat.png";
+
+/* set classNames for each "Total" instance so that we can change individual styling
+of different instances of same component name */
+
+const Total = styled.div`
+  width: 23vw;
+  height: 1.2vh;
+  border-radius: 1.2vw;
+  border-weight: 0.2vw;
+  position: relative;
+  box-shadow: 0 0 20px 0 rgba(82, 95, 110, 0.2);
+  top: -1.2vh;
+  &.sagree {
+    background-color: rgb(214,49,49, 0.6);
+  }
+
+  &.agree {
+    background-color: rgb(214,49,163, 0.6);
+  }
+
+  &.neutral {
+    background-color: rgb(64,93,217, 0.6);
+  }
+
+  &.sdisagree {
+    background-color: rgb(64,217,211, 0.6);
+  }
+
+  &.disagree {
+    background-color: rgb(123,217,64, 0.6);
+  }
+`
+
+const PercentTotal = styled.div`
+  position: relative;
+  height: 1.2vh;
+  border-radius: 1.2vw;
+  box-shadow: 0 0 20px 0 rgba(82, 95, 110, 0.2);
+  border-weight: 0.2vw;
+  &.sagree {
+    background-color: rgb(214,49,49, 1);
+    width: 12.65vw;
+  }
+
+  &.agree {
+    background-color: rgb(214,49,163, 1);
+    width: 4.37vw;
+  }
+
+  &.neutral {
+    background-color: rgb(64,93,217, 1);
+    width: 1.84vw;
+  }
+
+  &.sdisagree {
+    background-color: rgb(64,217,211, 1);
+    width: 2.76vw;
+  }
+
+  &.disagree {
+    background-color: rgb(123,217,64, 1);
+    width: 1.38vw;
+  }
+`
 
 export default class PollResults extends React.Component {
 
@@ -81,7 +146,13 @@ export default class PollResults extends React.Component {
           </MainDashGrid>
         </MainDash>
         <MiddleRow1><PieChart src={pie}></PieChart></MiddleRow1>
-        <MiddleRow2><ResultsOverview src={overview}></ResultsOverview></MiddleRow2>
+        <MiddleRow2>
+          <ResultsOverview>Strongly Agree<Percent>55%</Percent><Total className="sagree"><PercentTotal className="sagree"></PercentTotal></Total></ResultsOverview>
+          <ResultsOverview>Agree<Percent>19%</Percent><Total className="agree"><PercentTotal className="agree"></PercentTotal></Total></ResultsOverview>
+          <ResultsOverview>Neutral<Percent>8%</Percent><Total className="neutral"><PercentTotal className="neutral"></PercentTotal></Total></ResultsOverview>
+          <ResultsOverview>Disagree<Percent>12%</Percent><Total className="disagree"><PercentTotal className="disagree"></PercentTotal></Total></ResultsOverview>
+          <ResultsOverview>Strongly Disagree<Percent>6%</Percent><Total className="sdisagree"><PercentTotal className="sdisagree"></PercentTotal></Total></ResultsOverview>
+        </MiddleRow2>
         <MiddleRow3><Referrals src={referrals}></Referrals></MiddleRow3>
         <BottomRow1><Map src={map}></Map></BottomRow1>
         <BottomRow2><Heat src={heat}></Heat></BottomRow2>
